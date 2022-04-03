@@ -25,21 +25,25 @@ $(document).ready(function(){
         $body.addClass('color-' + $(this).data('color'));
       }
     }); 
+
+    //목업1 스크롤 애니메이션
     if($('body').hasClass('color-lavender') == true){
-        $("#header").addClass('lavender');
+      $("#about .mokup1").addClass('anim_go');
     }else{
-        $("#header").removeClass('lavender');
+      $("#about .mokup1").removeClass('anim_go');
     };
+    
+
     
   }).scroll();
 
   //슬라이드
   var swiper = new Swiper('.swiper-container', {
-    spaceBetween: 30,
+    spaceBetween: 0,
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 2500,
+      delay: 4500,
       disableOnInteraction: false,
     },
     pagination: {
@@ -51,4 +55,6 @@ $(document).ready(function(){
       prevEl: '.swiper-button-prev',
     },
   });
+
+
 });
