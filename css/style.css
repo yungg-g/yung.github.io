@@ -89,7 +89,9 @@ body{font-family: 'KNPSKkomi-Regular00', sans-serif;}
 
 /*index*/
 #main{margin:30px 0;}
-#main .center{display:block}
+#main .center{display:table; position:relative;}
+    #main .center::after{content: ''; width:100px; height:180px; position:absolute; bottom:150px; right:10px; background: url(../img/bannerImg.png) 50% bottom no-repeat; background-size: cover;}
+
     #main .aboutBox{float:left; width:240px; height:700px; border-radius: 0 30px 30px 0; border:1px solid #000; box-sizing: border-box; padding:15px;}
         .aboutBox .profile{width:100%; height:270px; border-radius: 30px; background:#facd89}
         .aboutBox h3{font-size:28px; line-height:60px; margin-top:20px;}
@@ -98,6 +100,10 @@ body{font-family: 'KNPSKkomi-Regular00', sans-serif;}
         .aboutBox li:hover{text-decoration: underline red;}
         .aboutBox li:last-child:hover{text-decoration-style: wavy;}
         .aboutBox li::before{content: ''; width:5px; height:5px; border-radius: 50%; background:#facd89; position:absolute; left:0; top:7px;}
+
+        .contact{width:100px; height:30px; line-height:30px; text-align: center; background-image: linear-gradient(129deg,#ffc170,#ec787f,#8980ed); border-radius: 10px;}
+        .contact a{display:block; line-height:30px; padding-top:4px;color:#fff; }
+
 
 #main .itemBox{float:right; width:830px; height:700px; overflow-y:scroll; overflow-x: hidden; border:1px solid #000;  box-sizing: border-box; margin-right:110px; padding:15px;}
     .itemBox .slide{width:800px; height:440px;}
